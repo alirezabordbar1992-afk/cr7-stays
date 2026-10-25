@@ -1,0 +1,419 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>CR7 Wonders Stays</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Dubai hotels at contracted rates from CR7 Wonders Tourism. Book on WhatsApp.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800;900&family=Schibsted+Grotesk:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: sticky search console over a single column of hotel "slips"; detail opens as a full-height sheet. */
+:root{
+  --ink:#10222f; --paper:#f4f6f3; --card:#ffffff; --line:#d9e0dc; --muted:#5d6e76;
+  --creek:#0b7f7a; --creek-ink:#ffffff; --saffron:#e9a21f; --saffron-soft:#fdf1d8; --sold:#b4322a; --sold-soft:#f9e4e2;
+  --wa:#128c4b;
+  --display:"Big Shoulders Display","Arial Narrow",Impact,sans-serif;
+  --body:"Schibsted Grotesk",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --r:14px;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --ink:#e6eef1; --paper:#0b151d; --card:#13212c; --line:#24384a; --muted:#93a6b0;
+  --creek:#33c2b9; --creek-ink:#04201f; --saffron:#f3bd52; --saffron-soft:#2e2611; --sold:#ff7a6e; --sold-soft:#3a1714; --wa:#3ccf7f; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --ink:#e6eef1; --paper:#0b151d; --card:#13212c; --line:#24384a; --muted:#93a6b0;
+  --creek:#33c2b9; --creek-ink:#04201f; --saffron:#f3bd52; --saffron-soft:#2e2611; --sold:#ff7a6e; --sold-soft:#3a1714; --wa:#3ccf7f; color-scheme:dark}
+*{box-sizing:border-box}
+.vh{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.45;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--paper)}
+a{color:inherit}
+button,select,input{font:inherit;color:inherit}
+.wrap{max-width:1080px;margin:0 auto}
+.num{font-variant-numeric:tabular-nums}
+/* masthead */
+.mast{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;padding-block:18px 10px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;gap:2px}
+.brand b{font-family:var(--display);font-weight:900;font-size:clamp(30px,7vw,44px);line-height:.9;letter-spacing:.01em;text-transform:uppercase}
+.brand b span{color:var(--creek)}
+.brand small{color:var(--muted);font-size:13px}
+.wa-chip{display:inline-flex;align-items:center;gap:8px;border:1.5px solid var(--wa);color:var(--wa);border-radius:999px;padding:6px 12px;font-weight:600;text-decoration:none;font-size:14px;white-space:nowrap}
+.wa-chip svg{width:16px;height:16px;fill:currentColor}
+/* search console */
+.console{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);padding-block:8px 10px;border-bottom:1px solid var(--line)}
+.fields{display:grid;grid-template-columns:1.3fr 1fr 1fr .8fr .7fr;gap:8px}
+.f.name{grid-column:1/-1;flex-direction:row;align-items:center;gap:10px}
+.f.name label{flex:none}
+.f.name input{font-size:16px}
+.f.name svg{width:17px;height:17px;flex:none;fill:none;stroke:var(--muted);stroke-width:2}
+.f{display:flex;flex-direction:column;gap:3px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:7px 10px;min-width:0}
+.f label{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.f select,.f input{border:0;background:transparent;padding:0;min-width:0;width:100%;font-weight:600;font-size:15px;outline:none}
+.f:focus-within{border-color:var(--creek);box-shadow:0 0 0 2px color-mix(in srgb,var(--creek) 25%,transparent)}
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px;align-items:center}
+.chip{border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 11px;font-size:13px;font-weight:600;cursor:pointer}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.chip:focus-visible,.btn:focus-visible,.slip:focus-visible{outline:2px solid var(--creek);outline-offset:2px}
+.sort{margin-left:auto;display:flex;gap:6px;align-items:center;font-size:13px;color:var(--muted)}
+.sort select{border:1px solid var(--line);background:var(--card);border-radius:8px;padding:4px 6px;font-weight:600;color:var(--ink)}
+@media (max-width:720px){
+  .fields{grid-template-columns:1fr 1fr}
+  .f.where{grid-column:1/-1}
+  .sort{margin-left:0;width:100%}
+}
+/* results */
+.count{font-size:13px;color:var(--muted);padding-block:12px 4px}
+.count b{color:var(--ink)}
+.list{display:grid;gap:12px;padding-bottom:28px}
+.slip{display:grid;grid-template-columns:260px 1fr auto;gap:0;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;cursor:pointer;text-align:left;padding:0;width:100%}
+.slip:hover{border-color:color-mix(in srgb,var(--creek) 55%,var(--line))}
+.ph{position:relative;aspect-ratio:3/2;background:var(--line);overflow:hidden;max-width:100%}
+.ph img{width:100%;height:100%;object-fit:cover;display:block}
+.mid{padding:14px 16px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.nm{font-family:var(--display);font-weight:800;font-size:24px;line-height:1;letter-spacing:.01em;text-wrap:balance}
+.meta{display:flex;gap:8px;flex-wrap:wrap;align-items:center;font-size:13px;color:var(--muted)}
+.stars{color:var(--saffron);letter-spacing:1px;font-size:12px}
+.bl{font-size:14px;color:var(--muted);display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.deal{align-self:flex-start;display:inline-flex;gap:6px;align-items:center;background:var(--saffron-soft);color:var(--ink);border:1px solid color-mix(in srgb,var(--saffron) 55%,transparent);border-radius:6px;padding:3px 8px;font-size:12px;font-weight:600}
+.deal i{font-style:normal;color:var(--saffron);font-weight:800}
+.side{padding:14px 16px;display:flex;flex-direction:column;align-items:flex-end;justify-content:space-between;gap:10px;border-left:1px dashed var(--line);min-width:170px}
+.price{text-align:right}
+.price .big{font-family:var(--display);font-weight:800;font-size:30px;line-height:1}
+.price .big small{font-family:var(--body);font-size:13px;font-weight:600;margin-right:3px}
+.price .sub{font-size:12px;color:var(--muted)}
+.tag{font-size:12px;font-weight:700;border-radius:6px;padding:3px 8px}
+.tag.sold{background:var(--sold-soft);color:var(--sold)}
+.tag.ask{background:color-mix(in srgb,var(--creek) 14%,transparent);color:var(--creek)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:10px;padding:10px 14px;font-weight:700;cursor:pointer;text-decoration:none;font-size:14px}
+.btn.go{background:var(--creek);color:var(--creek-ink)}
+.btn.wa{background:var(--wa);color:#fff}
+.btn.ghost{background:transparent;border:1px solid var(--line)}
+.btn svg{width:17px;height:17px;fill:currentColor}
+@media (max-width:720px){
+  .slip{grid-template-columns:1fr}
+  .side{border-left:0;border-top:1px dashed var(--line);flex-direction:row;align-items:center;min-width:0}
+  .price{text-align:left}
+}
+/* typographic cover for hotels without photos */
+.cover{position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:14px;color:#fff;
+  background:
+   repeating-linear-gradient(90deg,transparent 0 22px,rgba(255,255,255,.07) 22px 23px),
+   linear-gradient(160deg,hsl(var(--h) 55% 34%),hsl(calc(var(--h) + 25) 60% 18%))}
+.cover::before{content:"";position:absolute;left:0;right:0;bottom:38%;height:46%;
+  clip-path:polygon(0 100%,0 70%,6% 70%,6% 40%,10% 40%,10% 62%,16% 62%,16% 22%,19% 22%,19% 8%,21% 8%,21% 22%,24% 22%,24% 55%,31% 55%,31% 35%,36% 35%,36% 66%,44% 66%,44% 48%,50% 48%,50% 0,51.5% 0,51.5% 48%,57% 48%,57% 60%,64% 60%,64% 30%,70% 30%,70% 58%,77% 58%,77% 44%,83% 44%,83% 68%,90% 68%,90% 50%,95% 50%,95% 74%,100% 74%,100% 100%);
+  background:rgba(255,255,255,.13)}
+.cover b{position:relative;font-family:var(--display);font-weight:900;font-size:clamp(22px,4.2vw,30px);line-height:.95;text-transform:uppercase;text-wrap:balance}
+.cover span{position:relative;font-size:11px;letter-spacing:.14em;text-transform:uppercase;opacity:.85;margin-top:6px}
+/* sheet */
+.sheet{position:fixed;inset:0;z-index:20;background:var(--paper);overflow-y:auto;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.sheet .in{max-width:880px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:10px 40px}
+.sheet .bar{position:sticky;top:0;z-index:2;background:var(--paper);display:flex;align-items:center;gap:10px;padding-block:8px;border-bottom:1px solid var(--line)}
+.sheet .bar .t{font-weight:700;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0;flex:1}
+.gal{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x mandatory;margin-top:12px;border-radius:var(--r)}
+.gal>*{flex:0 0 min(88%,560px);scroll-snap-align:start;aspect-ratio:3/2;border-radius:var(--r);overflow:hidden;position:relative;background:var(--line)}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.hd{display:flex;flex-direction:column;gap:6px;margin-top:14px}
+.hd h1{font-family:var(--display);font-weight:900;font-size:clamp(32px,7vw,46px);line-height:.95;margin:0;text-transform:uppercase;text-wrap:balance}
+.box{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:14px 16px;margin-top:14px}
+.box h2{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin:0 0 8px;font-weight:700}
+.dealbox{border-color:color-mix(in srgb,var(--saffron) 60%,transparent);background:var(--saffron-soft)}
+.dealbox ul,.notes ul{margin:6px 0 0;padding-left:18px}
+.dealbox li,.notes li{margin:2px 0}
+.when{display:flex;gap:8px;flex-wrap:wrap;font-size:14px}
+.when .f{flex:1 1 140px}
+.rooms{display:grid;gap:8px}
+.room{display:grid;grid-template-columns:1fr auto;gap:6px 12px;align-items:center;padding:12px 0;border-top:1px solid var(--line)}
+.room:first-child{border-top:0}
+.room .rn{font-weight:700;min-width:0}
+.room .rm{font-size:13px;color:var(--muted)}
+.room .rp{text-align:right}
+.room .rp b{font-family:var(--display);font-size:24px;font-weight:800}
+.room .act{grid-column:1/-1;display:flex;justify-content:flex-end}
+.room[aria-current="true"]{background:color-mix(in srgb,var(--creek) 8%,transparent);border-radius:10px;padding-inline:10px;margin-inline:-10px}
+.book{display:grid;gap:8px;grid-template-columns:1fr 1fr}
+.book .f{grid-column:span 1}
+.book .full{grid-column:1/-1}
+@media (max-width:560px){.book{grid-template-columns:1fr}}
+.summary{font-size:14px;line-height:1.6}
+.summary b{font-weight:700}
+.copyrow{display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.copyrow code{font-family:var(--body);font-weight:700;color:var(--ink);user-select:all}
+.room.stop .rn,.room.stop .rp b,.room.stop .rp .rm{color:var(--sold)}
+.room.stop{background:var(--sold-soft);border-radius:10px;padding-inline:10px;margin-inline:-10px}
+.price.stopp .big,.price.stopp .sub{color:var(--sold)}
+.price.stopp .tag{margin-bottom:4px}
+.soldnote{background:var(--sold-soft);color:var(--sold);border-radius:10px;padding:10px 12px;font-weight:600;font-size:14px}
+footer{border-top:1px solid var(--line);padding-block:18px 30px;font-size:13px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 18px}
+.empty{padding:30px;text-align:center;color:var(--muted);background:var(--card);border:1px dashed var(--line);border-radius:var(--r)}
+@media (prefers-reduced-motion:no-preference){.slip{transition:border-color .15s}.sheet{animation:up .22s ease-out}@keyframes up{from{transform:translateY(16px);opacity:.6}to{transform:none;opacity:1}}}
+</style>
+
+</head><body>
+<div class="wrap">
+  <header class="mast">
+    <div class="brand"><b>CR7 Wonders <span>Stays</span></b><small>Dubai hotels at contracted rates · free airport transfers both ways</small></div>
+    <a class="wa-chip" id="waTop" href="https://wa.me/971521542323" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg><span class="num">+971 52 154 2323</span></a>
+  </header>
+</div>
+
+<div class="console">
+  <div class="wrap">
+    <form class="fields" id="search" autocomplete="off">
+      <div class="f name"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><label for="q" class="vh">Hotel name</label><input type="search" id="q" list="hl" placeholder="Search hotel name, e.g. Hilton or Rotana" enterkeyhint="search"><datalist id="hl"></datalist></div>
+      <div class="f where"><label for="area">Where</label><select id="area"><option value="">All areas</option></select></div>
+      <div class="f"><label for="ci">Check-in</label><input type="date" id="ci" required></div>
+      <div class="f"><label for="co">Check-out</label><input type="date" id="co" required></div>
+      <div class="f"><label for="ad">Adults</label><select id="ad"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+      <div class="f"><label for="rm">Rooms</label><select id="rm"><option selected>1</option><option>2</option><option>3</option><option>4</option></select></div>
+    </form>
+    <div class="chips" role="group" aria-label="Filters">
+      <button class="chip" type="button" data-f="deal" aria-pressed="false">Deals</button>
+      <button class="chip" type="button" data-f="bb" aria-pressed="false">Breakfast included</button>
+      <button class="chip" type="button" data-f="s5" aria-pressed="false">5 star</button>
+      <button class="chip" type="button" data-f="apt" aria-pressed="false">Apartments</button>
+      <button class="chip" type="button" data-f="open" aria-pressed="false">Available only</button>
+      <label class="sort" for="sort">Sort <select id="sort"><option value="rec">Recommended</option><option value="lo">Price: low to high</option><option value="hi">Price: high to low</option><option value="az">Name A–Z</option></select></label>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="count" id="count">Loading hotels…</div>
+  <main class="list" id="list"></main>
+  <footer>
+    <span>CR7 Wonders Tourism L.L.C · Dubai</span>
+    <span>Contracted rates across Dubai &amp; the UAE · prices per room in AED, incl. VAT &amp; service charge</span>
+    <span>Tourism Dirham fee is paid at the hotel</span>
+    <span id="upd"></span>
+  </footer>
+</div>
+
+<div class="sheet" id="sheet" hidden role="dialog" aria-modal="true" aria-labelledby="hName"></div>
+
+<script>
+(()=>{
+const WA="971521542323";
+const $=s=>document.querySelector(s);
+const AREA_HUE={"Deira":28,"Bur Dubai":12,"Port Saeed / Deira City Centre":190,"Dubai Healthcare City / Bur Dubai":205,"Al Jaddaf":165,"Al Garhoud":45,
+ "JBR":350,"JBR / Dubai Marina":340,"Dubai Marina":330,"Jumeirah":200,"Palm Jumeirah":215,"Business Bay":260,"Downtown Dubai":275,"Sheikh Zayed Road":240,"Al Barsha":300,"Festival City":180};
+let DATA={hotels:[]}, state={q:"",area:"",ci:"",co:"",ad:2,rm:1,f:new Set(),sort:"rec"};
+const norm=s=>String(s||"").toLowerCase().normalize("NFD").replace(/\p{M}/gu,"").replace(/[^a-z0-9]+/g," ").trim();
+function matchQ(h){const hay=" "+norm(h.name+" "+h.area+" "+(h.kind||""))+" ";return norm(state.q).split(" ").every(w=>hay.includes(w))}
+const fmt=n=>"AED "+Math.round(n).toLocaleString("en-US");
+function dubaiToday(){const p=new Intl.DateTimeFormat("en-CA",{timeZone:"Asia/Dubai",year:"numeric",month:"2-digit",day:"2-digit"}).format(new Date());return p}
+function addDays(s,n){const d=new Date(s+"T00:00:00Z");d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10)}
+function nightsOf(ci,co){const out=[];for(let d=ci;d<co;d=addDays(d,1))out.push(d);return out}
+function nice(s,y){const d=new Date(s+"T00:00:00Z");return d.toLocaleDateString("en-GB",{weekday:"short",day:"numeric",month:"short",year:y?"numeric":undefined,timeZone:"UTC"})}
+const esc=s=>String(s??"").replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const MEAL={BB:"Breakfast included",RO:"Room only",HB:"Half board","HB+":"Half board plus",FB:"Full board",AI:"All inclusive"};
+
+function blocked(h,nights){ // real stop sales close the hotel; "Offer blackout" only removes offer rates
+  const hits=(h.stop||[]).filter(s=>nights.some(d=>d>=s.frm&&d<=s.to));
+  return {sold:hits.some(s=>!s.partial&&!/blackout/i.test(s.rooms||"")),black:hits.filter(s=>/blackout/i.test(s.rooms||"")),partial:hits.filter(s=>s.partial)};
+}
+function stopKeys(txt){return norm(txt).split(/ (?:and|&) |,|\//).map(x=>x.replace(/\b(rooms?|types?|category|categories|only)\b/g," ").replace(/\s+/g," ").trim()).filter(Boolean)}
+function roomStopped(room,partial,nights){
+  const rk=norm(room).replace(/\broom\b/g," ").replace(/\s+/g," ").trim();
+  return partial.some(s=>nights.some(d=>d>=s.frm&&d<=s.to)&&(/\ball\b/.test(norm(s.rooms))||stopKeys(s.rooms).some(k=>k===rk)));
+}
+function options(h,ci,co){
+  const today=dubaiToday(), nights=nightsOf(ci,co), b=blocked(h,nights);
+  const groups={};
+  for(const r of h.rates||[]){ if(r.b&&r.b<today) continue; (groups[r.r+"|"+r.m+"|"+(r.x||"")] ||= []).push(r) }
+  const opts=[];
+  for(const [k,rs] of Object.entries(groups)){
+    let total=0, ok=true;
+    for(const d of nights){
+      if(b.black.some(s=>d>=s.frm&&d<=s.to)){ok=false;break}
+      const r=rs.find(r=>d>=r.f&&d<=r.t); if(!r){ok=false;break} total+=r.p;
+    }
+    if(ok) opts.push({room:rs[0].r,meal:rs[0].m,terms:rs[0].x||"",bf:rs.find(r=>r.bf)?.bf,total,per:total/nights.length,stop:b.sold||roomStopped(rs[0].r,b.partial,nights)});
+  }
+  opts.sort((a,b)=>(a.stop-b.stop)||(a.total-b.total));
+  return {sold:b.sold,opts,open:opts.filter(x=>!x.stop),partial:b.partial};
+}
+function starStr(n){return n?"★".repeat(n):""}
+function coverHTML(h,big){
+  if(h.photos&&h.photos.length) return `<img src="${esc(h.photos[0])}" alt="${esc(h.name)}" loading="lazy" decoding="async">`;
+  const hue=AREA_HUE[h.area]??((h.name.length*37)%360);
+  return `<div class="cover" style="--h:${hue}"><b>${esc(h.name)}</b><span>${esc(h.area)}</span></div>`;
+}
+function dealLine(p,today){
+  if(!p) return "";
+  const by=p.bookBy?` · book by ${nice(p.bookBy)}`:"";
+  const from=p.bookFrom&&p.bookFrom>today?` · opens ${nice(p.bookFrom)}`:"";
+  return `<span class="deal"><i>%</i>${esc(p.name)}${by}${from}</span>`;
+}
+
+function render(){
+  const today=dubaiToday(), {ci,co}=state, n=nightsOf(ci,co).length;
+  let rows=DATA.hotels.map(h=>({h,o:options(h,ci,co)}));
+  rows=rows.filter(({h,o})=>{
+    if(state.area&&h.area!==state.area) return false;
+    if(state.q&&!matchQ(h)) return false;
+    if(state.f.has("deal")&&!h.promo) return false;
+    if(state.f.has("s5")&&h.stars!==5) return false;
+    if(state.f.has("apt")&&!/apart/i.test(h.kind||"")) return false;
+    if(state.f.has("bb")&&!o.open.some(x=>x.meal!=="RO")) return false;
+    if(state.f.has("open")&&(o.sold||!o.open.length)) return false;
+    return true;
+  });
+  const best=o=>{const x=state.f.has("bb")?o.open.filter(x=>x.meal!=="RO"):o.open;return x.length?x[0]:null};
+  const bestStop=o=>o.opts.find(x=>x.stop)||null;
+  const rank=({h,o})=>best(o)?0:(bestStop(o)?2:(o.sold?3:1.5));
+  rows.sort((a,b)=>{
+    if(state.sort==="az") return a.h.name.localeCompare(b.h.name);
+    const ra=rank(a), rb=rank(b); if(ra!==rb) return ra-rb;
+    const pa=(best(a.o)||bestStop(a.o))?.total??1e9, pb=(best(b.o)||bestStop(b.o))?.total??1e9;
+    if(state.sort==="lo") return pa-pb;
+    if(state.sort==="hi") return pb-pa;
+    const sa=(a.h.promo?2:0)+(a.h.photos?.length?1:0)+(a.h.stars||0)/10, sb=(b.h.promo?2:0)+(b.h.photos?.length?1:0)+(b.h.stars||0)/10;
+    return sb-sa||pa-pb;
+  });
+  const avail=rows.filter(r=>best(r.o)).length;
+  $("#count").innerHTML=`<b>${rows.length}</b> hotels · <b>${avail}</b> with live prices for ${nice(ci)} → ${nice(co)} · ${n} night${n>1?"s":""}`;
+  const list=$("#list");
+  if(!rows.length){list.innerHTML=state.q?`<div class="empty">No hotel on our list matches “${esc(state.q)}”${state.area||state.f.size?" with these filters":""}.<br>Send us the hotel name on WhatsApp — we can often still get a rate.<br><br><a class="btn wa" href="${waLink("Hi, I'm looking for a room at: "+state.q+"\nCheck-in: "+nice(state.ci,1)+"\nCheck-out: "+nice(state.co,1)+"\nGuests: "+state.ad+" adults · "+state.rm+" room"+(state.rm>1?"s":""))}" target="_blank" rel="noopener">Ask on WhatsApp</a></div>`:`<div class="empty">No hotels match these filters. Clear a filter or pick another area.</div>`;return}
+  list.innerHTML=rows.map(({h,o})=>{
+    const b=best(o), bs=bestStop(o); let side;
+    if(!b&&bs) side=`<div class="price stopp"><span class="tag sold">Stop sale</span><div class="big num"><small>AED</small>${Math.round(bs.total*state.rm).toLocaleString("en-US")}</div><div class="sub">${n} night${n>1?"s":""}${state.rm>1?` · ${state.rm} rooms`:""} · ${esc(MEAL[bs.meal]||bs.meal)}</div></div><span class="btn ghost">See details</span>`;
+    else if(o.sold) side=`<span class="tag sold">Stop sale on these dates</span><span class="btn ghost">See details</span>`;
+    else if(b) side=`<div class="price"><div class="big num"><small>AED</small>${Math.round(b.total*state.rm).toLocaleString("en-US")}</div><div class="sub">${n} night${n>1?"s":""}${state.rm>1?` · ${state.rm} rooms`:""} · ${esc(MEAL[b.meal]||b.meal)}</div></div><span class="btn go">Choose room</span>`;
+    else side=`<span class="tag ask">${o.partial&&o.partial.length?"Limited rooms · ":""}Price on WhatsApp</span><span class="btn ghost">See details</span>`;
+    return `<button class="slip" type="button" data-id="${esc(h.id)}">
+      <div class="ph">${coverHTML(h)}</div>
+      <div class="mid"><div class="nm">${esc(h.name)}</div>
+        <div class="meta">${h.stars?`<span class="stars" aria-label="${h.stars} star">${starStr(h.stars)}</span>`:""}<span>${esc(h.area)}</span><span>·</span><span>${esc(h.kind||"Hotel")}</span></div>
+        <div class="bl">${esc(h.blurb)}</div>${dealLine(h.promo,today)}</div>
+      <div class="side">${side}</div></button>`}).join("");
+}
+
+/* ---------- detail sheet ---------- */
+let cur=null, pick=null;
+function waLink(text){return `https://wa.me/${WA}?text=${encodeURIComponent(text)}`}
+function msgFor(h){
+  const n=nightsOf(state.ci,state.co).length;
+  const g=$("#gn")?.value.trim(), nat=$("#gnat")?.value.trim(), ch=$("#gch")?.value||"0", ph=$("#gph")?.value.trim();
+  const lines=["Booking request – CR7 Wonders Stays","Hotel: "+h.name];
+  if(pick) lines.push("Room: "+pick.room+" ("+(MEAL[pick.meal]||pick.meal)+")"+(pick.terms?" – "+pick.terms:""));
+  lines.push("Check-in: "+nice(state.ci,1),"Check-out: "+nice(state.co,1)+" ("+n+" night"+(n>1?"s":"")+")",
+    "Guests: "+state.ad+" adult"+(state.ad>1?"s":"")+(ch!=="0"?", "+ch+" child"+(ch>1?"ren":""):"")+" · "+state.rm+" room"+(state.rm>1?"s":""));
+  if(pick) lines.push("Price shown: "+fmt(pick.total*state.rm));
+  else lines.push("Please send me your best price.");
+  if(g) lines.push("Lead guest: "+g); if(nat) lines.push("Nationality: "+nat); if(ph) lines.push("Phone: "+ph);
+  return lines.join("\n");
+}
+function refreshBook(){
+  if(!cur) return;
+  const a=$("#bookBtn"); if(a) a.href=waLink(msgFor(cur));
+  const s=$("#bsum"); if(s) s.innerHTML=pick?`<b>${esc(pick.room)}</b> · ${esc(MEAL[pick.meal]||pick.meal)}<br>${nice(state.ci,1)} → ${nice(state.co,1)} · <b class="num">${fmt(pick.total*state.rm)}</b>`:`No room picked. We'll reply with prices for your dates.`;
+}
+function openHotel(id,push=true){
+  const h=DATA.hotels.find(x=>x.id===id); if(!h) return;
+  cur=h; const today=dubaiToday(), o=options(h,state.ci,state.co), n=nightsOf(state.ci,state.co).length;
+  pick=o.open[0]||null;
+  const gal=(h.photos&&h.photos.length?h.photos.map(p=>`<div><img src="${esc(p)}" alt="${esc(h.name)}" decoding="async"></div>`).join(""):`<div>${coverHTML(h)}</div>`);
+  const p=h.promo;
+  const rooms=(o.sold?`<div class="soldnote" style="margin-bottom:10px">Stop sale: the hotel has closed sales for some of these nights. Prices in red are shown for reference only. Change your dates or ask us on WhatsApp.</div>`:"")+(o.opts.length?`<div class="rooms">${o.opts.map((x,i)=>`<div class="room${x.stop?" stop":""}" data-i="${i}" ${x===pick?'aria-current="true"':""}>
+      <div><div class="rn">${esc(x.room)}</div><div class="rm">${esc(MEAL[x.meal]||x.meal)}${x.terms?" · "+esc(x.terms):""}${x.bf&&x.bf>today?" · bookable from "+nice(x.bf):""}</div></div>
+      <div class="rp"><b class="num">${fmt(x.total*state.rm)}</b><div class="rm num">${fmt(x.per)} / night${state.rm>1?" · per room":""}</div></div>
+      <div class="act">${x.stop?`<span class="tag sold">Stop sale</span>`:`<button class="btn ${x===pick?"go":"ghost"}" type="button" data-pick="${i}">${x===pick?"Selected":"Select"}</button>`}</div></div>`).join("")}</div>`:
+    `<div class="summary">We don't have a published price for these dates yet. Send the request below and we'll reply on WhatsApp with today's rate.</div>`);
+  $("#sheet").innerHTML=`<div class="bar"><button class="btn ghost" type="button" id="back" aria-label="Back to hotels">← Hotels</button><div class="t">${esc(h.name)}</div></div>
+  <div class="in">
+    <div class="gal">${gal}</div>
+    <div class="hd"><h1 id="hName">${esc(h.name)}</h1>
+      <div class="meta">${h.stars?`<span class="stars">${starStr(h.stars)}</span>`:""}<span>${esc(h.area)}</span><span>·</span><span>${esc(h.kind||"Hotel")}</span></div>
+      <div>${esc(h.blurb)}</div></div>
+    ${p?`<div class="box dealbox"><h2>Current offer</h2><b>${esc(p.name)}</b>
+      <div class="rm">${p.stay?`Stay ${nice(p.stay[0])} – ${nice(p.stay[1],1)}`:""}${p.bookBy?` · book by ${nice(p.bookBy,1)}`:""}${p.bookFrom&&p.bookFrom>today?` · bookable from ${nice(p.bookFrom)}`:""}</div>
+      ${p.perks?.length?`<ul>${p.perks.map(x=>`<li>${esc(x)}</li>`).join("")}</ul>`:""}</div>`:""}
+    <div class="box"><h2>Your stay</h2>
+      <div class="when"><div class="f"><label for="sci">Check-in</label><input type="date" id="sci" value="${state.ci}" min="${today}"></div>
+      <div class="f"><label for="sco">Check-out</label><input type="date" id="sco" value="${state.co}" min="${addDays(state.ci,1)}"></div>
+      <div class="f"><label for="sad">Adults</label><select id="sad">${[1,2,3,4].map(v=>`<option ${v==state.ad?"selected":""}>${v}</option>`).join("")}</select></div>
+      <div class="f"><label for="srm">Rooms</label><select id="srm">${[1,2,3,4].map(v=>`<option ${v==state.rm?"selected":""}>${v}</option>`).join("")}</select></div></div>
+      <div class="rm" style="margin-top:6px">${n} night${n>1?"s":""} · prices are per stay for ${state.rm} room${state.rm>1?"s":""}, up to 2 adults per room. Extra guests are confirmed on WhatsApp.</div></div>
+    <div class="box"><h2>Rooms for your dates</h2>${o.partial&&o.partial.length?`<div class="soldnote" style="margin-bottom:10px">Closed on some of your nights: ${o.partial.map(s=>esc(s.rooms)+" ("+nice(s.frm)+(s.to!==s.frm?" – "+nice(s.to):"")+")").join("; ")}. Those rooms show in red; other room types are still open.</div>`:""}${rooms}</div>
+    <div class="box"><h2>Request this booking</h2>
+      <div class="summary" id="bsum"></div>
+      <form class="book" id="bookForm" style="margin-top:10px" autocomplete="on">
+        <div class="f"><label for="gn">Lead guest name</label><input id="gn" name="name" placeholder="As on passport"></div>
+        <div class="f"><label for="gnat">Nationality</label><input id="gnat" name="nationality" placeholder="e.g. India"></div>
+        <div class="f"><label for="gch">Children</label><select id="gch"><option>0</option><option>1</option><option>2</option><option>3</option></select></div>
+        <div class="f"><label for="gph">Your phone (optional)</label><input id="gph" name="tel" inputmode="tel"></div>
+        <a class="btn wa full" id="bookBtn" href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm4.5 12.1c-.2-.1-1.5-.7-1.7-.8s-.4-.1-.6.1-.7.8-.8 1-.3.2-.6.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.1 5.1 0 0 0 1.1 2.7 11.6 11.6 0 0 0 4.5 4c1.7.7 2.3.8 3.2.6a2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.3c-.1-.1-.3-.2-.5-.3Z"/></svg>Send booking on WhatsApp</a>
+      </form>
+      <div class="copyrow" style="margin-top:10px">WhatsApp didn't open? Message <code class="num">+971 52 154 2323</code><button class="btn ghost" type="button" id="copyMsg">Copy request</button><span id="copied" role="status"></span></div>
+      <div class="rm" style="margin-top:6px">Booking is confirmed only after we reply. Free airport transfer both ways is included with every hotel booking.</div></div>
+    ${h.notes?.length?`<div class="box notes"><h2>Good to know</h2><ul>${h.notes.map(x=>`<li>${esc(x)}</li>`).join("")}</ul></div>`:""}
+    <div class="rm" style="margin-top:12px">${h.upd?`Rates and availability from the hotel's notice of ${nice(h.upd,1)}.`:""}</div>
+  </div>`;
+  const sh=$("#sheet"); sh.hidden=false; sh.scrollTop=0; document.body.style.overflow="hidden";
+  if(push&&location.hash.slice(1)!==id){try{history.pushState(null,"","#"+id)}catch(e){location.hash=id}}
+  refreshBook(); $("#back").focus({preventScroll:true});
+}
+function closeSheet(){ $("#sheet").hidden=true; document.body.style.overflow=""; cur=null;
+  if(location.hash){try{history.pushState(null,"",location.pathname+location.search)}catch(e){location.hash=""}} }
+
+/* ---------- events ---------- */
+function syncFromForm(){
+  state.q=$("#q").value.trim(); state.area=$("#area").value; state.ad=+$("#ad").value; state.rm=+$("#rm").value;
+  let ci=$("#ci").value, co=$("#co").value, today=dubaiToday();
+  if(!ci||ci<today) ci=today; if(!co||co<=ci) co=addDays(ci,1);
+  if(nightsOf(ci,co).length>30) co=addDays(ci,30);
+  state.ci=ci; state.co=co; $("#ci").value=ci; $("#co").value=co; $("#co").min=addDays(ci,1);
+  try{localStorage.setItem("cr7s",JSON.stringify({ci,co,ad:state.ad,rm:state.rm,area:state.area}))}catch(e){}
+  render();
+}
+$("#search").addEventListener("change",syncFromForm);
+$("#q").addEventListener("input",()=>{state.q=$("#q").value.trim();render()});
+$("#search").addEventListener("submit",e=>{e.preventDefault();syncFromForm()});
+document.querySelectorAll(".chip").forEach(c=>c.addEventListener("click",()=>{
+  const on=c.getAttribute("aria-pressed")!=="true"; c.setAttribute("aria-pressed",on); on?state.f.add(c.dataset.f):state.f.delete(c.dataset.f); render()}));
+$("#sort").addEventListener("change",e=>{state.sort=e.target.value;render()});
+$("#list").addEventListener("click",e=>{const b=e.target.closest(".slip"); if(b) openHotel(b.dataset.id)});
+$("#sheet").addEventListener("click",e=>{
+  if(e.target.closest("#back")) return closeSheet();
+  const p=e.target.closest("[data-pick]");
+  if(p){ const o=options(cur,state.ci,state.co); pick=o.opts[+p.dataset.pick];
+    document.querySelectorAll(".room").forEach(r=>{const on=r.dataset.i===p.dataset.pick; r.toggleAttribute("aria-current",on); if(on) r.setAttribute("aria-current","true");
+      const b=r.querySelector("[data-pick]"); if(!b) return; b.className="btn "+(on?"go":"ghost"); b.textContent=on?"Selected":"Select"});
+    refreshBook(); $("#bookForm").scrollIntoView({behavior:"smooth",block:"center"}); }
+  if(e.target.closest("#copyMsg")){ const t=msgFor(cur), out=$("#copied");
+    (navigator.clipboard?.writeText(t)||Promise.reject()).then(()=>out.textContent="Copied").catch(()=>{out.textContent="Select and copy the number above"}); }
+});
+$("#sheet").addEventListener("input",e=>{ if(e.target.closest("#bookForm")) refreshBook() });
+$("#sheet").addEventListener("change",e=>{
+  const id=e.target.id;
+  if(["sci","sco","sad","srm"].includes(id)){
+    $("#ci").value=$("#sci").value; $("#co").value=$("#sco").value; $("#ad").value=$("#sad").value; $("#rm").value=$("#srm").value;
+    const keep=cur.id; syncFromForm(); openHotel(keep,false);
+  } else refreshBook();
+});
+document.addEventListener("keydown",e=>{if(e.key==="Escape"&&!$("#sheet").hidden) closeSheet()});
+window.addEventListener("popstate",()=>{const id=location.hash.slice(1); if(id&&DATA.hotels.some(h=>h.id===id)) openHotel(id,false); else if(!$("#sheet").hidden){$("#sheet").hidden=true;document.body.style.overflow="";cur=null}});
+
+/* ---------- boot ---------- */
+(function init(){
+  const today=dubaiToday(); let saved={};
+  try{saved=JSON.parse(localStorage.getItem("cr7s")||"{}")}catch(e){}
+  const ci=saved.ci&&saved.ci>=today?saved.ci:addDays(today,10);
+  const co=saved.co&&saved.co>ci?saved.co:addDays(ci,3);
+  $("#ci").value=ci; $("#co").value=co; $("#ci").min=today;
+  if(saved.ad) $("#ad").value=saved.ad; if(saved.rm) $("#rm").value=saved.rm;
+  fetch("data/hotels.json",{cache:"no-cache"}).then(r=>r.json()).then(d=>{
+    DATA=d;
+    const areas=[...new Set(d.hotels.map(h=>h.area))].sort();
+    $("#area").insertAdjacentHTML("beforeend",areas.map(a=>`<option>${esc(a)}</option>`).join(""));
+    $("#hl").innerHTML=d.hotels.map(h=>`<option value="${esc(h.name)}">`).join("");
+    if(saved.area&&areas.includes(saved.area)) $("#area").value=saved.area;
+    const u=new Date(d.updated); $("#upd").textContent="Rates updated "+u.toLocaleString("en-GB",{timeZone:"Asia/Dubai",day:"numeric",month:"short",hour:"2-digit",minute:"2-digit"})+" Dubai time";
+    syncFromForm();
+    const id=location.hash.slice(1); if(id) openHotel(id,false);
+  }).catch(()=>{$("#count").textContent="Hotels couldn't load. Refresh the page, or message us on WhatsApp at +971 52 154 2323."});
+})();
+})();
+</script>
+
+</body></html>
